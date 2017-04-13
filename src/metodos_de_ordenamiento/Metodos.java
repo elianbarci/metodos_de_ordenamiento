@@ -2,6 +2,37 @@ package metodos_de_ordenamiento;
 import java.util.*;
 
 public class Metodos {
+	
+	public static int [] crearVectorDesordenado(){
+		
+	Random randomGenerator = new Random();
+	
+	int [] vector = new int[100];
+	
+	for(int i = 0; i<vector.length;i++){
+		
+		int randomInt = randomGenerator.nextInt(100);
+		
+		vector[i] = randomInt;
+		
+	}
+	
+	Vector g = new Vector();
+	
+	for (int h = 0; h < vector.length; h++) {
+		
+	    g.add(vector[h]);
+	    
+	}
+	
+	System.out.println("Array desordenado: ");	
+	System.out.println(g.toString());
+	
+	return vector;
+	
+	}
+	
+	
 		
 	public static void burbuja(int [] vector){			//Es estatico asì lo podemos llamar de manera estatica
 		long time_start, time_end;
